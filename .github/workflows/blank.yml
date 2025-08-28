@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraper
-        run: crowd_meter_scraper.py
+        run: python crowd_meter_scraper.py
 
       - name: Commit CSV back to repo
         run: |
