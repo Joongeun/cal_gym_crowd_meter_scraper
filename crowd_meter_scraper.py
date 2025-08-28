@@ -26,7 +26,7 @@ def save_page_as_mhtml(url, mhtml_file):
         print(f"Saved MHTML to {mhtml_file}")
 
 
-def extract_preceding_chars(mhtml_file, keyword, n=4):
+def extract_preceding_chars(mhtml_file, keyword):
     """Print the n characters preceding each occurrence of keyword in MHTML text."""
     with open(mhtml_file, "r", encoding="utf-8") as f:
         text = f.read()
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     save_page_as_mhtml(URL, MHTML_FILE)
 
     keyword = " Full"  # change this
-    preceding_chars = extract_preceding_chars(MHTML_FILE, keyword, n=3)
+    preceding_chars = extract_preceding_chars(MHTML_FILE, keyword)
 
     if preceding_chars:
         log_to_csv(CSV_FILE, keyword, preceding_chars)
