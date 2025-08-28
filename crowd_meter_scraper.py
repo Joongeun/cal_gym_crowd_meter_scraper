@@ -33,7 +33,7 @@ def save_page_as_mhtml(url, mhtml_file):
         print(f"Saved MHTML to {mhtml_file}")
 
 
-def extract_preceding_chars(mhtml_file, keyword, n=3):
+def extract_preceding_chars(mhtml_file, keyword, n=4):
     """Print the n characters preceding each occurrence of keyword in MHTML text."""
     with open(mhtml_file, "r", encoding="utf-8") as f:
         text = f.read()
@@ -46,6 +46,8 @@ def extract_preceding_chars(mhtml_file, keyword, n=3):
             break
         # get up to n preceding chars (if available)
         preceding = text[max(0, index - n):index]
+        if preceding[0] != "1": 
+            preceding = preceding[1:]
         results.append(preceding)
         index += len(keyword)
     print(results)
