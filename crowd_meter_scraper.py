@@ -38,7 +38,7 @@ def extract_preceding_chars(mhtml_file, keyword):
         if index == -1:
             break
         # get up to n preceding chars (if available)
-        preceding = text[max(0, index - n):index]
+        preceding = text[max(0, index - 4):index]
         if preceding[0] != "1": 
             preceding = preceding[1:]
         results.append(preceding)
