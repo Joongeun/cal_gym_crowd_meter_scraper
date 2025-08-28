@@ -1,10 +1,3 @@
-## Instructions on automatically creating requirements.txt and installing packages
-# create venv by doing cmd+shift+p and selecting "Python: Create Environment"
-# pip install pipreqs
-# pipreqs "/Users/clash/Documents/VSCode/Personal reminder cron jobs/.venv/code" --force
-# change directory into "code" folder using cd
-# pip install -r requirements.txt
-
 import csv
 import os
 from datetime import datetime
