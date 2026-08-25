@@ -1,0 +1,69 @@
+permissions:
+  contents: write
+
+name: Semester Report
+
+# Runs the day after each semester window closes (see SEMESTER_WINDOWS in
+# analysis/loader.py -- the two must stay in step):
+#   spring ends May 20  -> report May 21
+#   summer ends Aug 17  -> report Aug 18
+#   fall   ends Dec 21  -> report Dec 22
+# 09:17 UTC is ~1-2am campus time, and off the top of the hour where GitHub's
+# scheduler is most congested.
+on:
+  schedule:
+    - cron: "17 9 21 5 *"
+    - cron: "17 9 18 8 *"
+    - cron: "17 9 22 12 *"
+  workflow_dispatch:
+    inputs:
+      semester:
+        description: "auto (last completed), all, or a slug like fall-2025"
+        required: false
+        default: "auto"
+
+concurrency:
+  group: semester-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-analysis.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s analysis/tests -t .
+
+      - name: Build report
+        run: python -m analysis.report --semester "${{ github.event.inputs.semester || 'auto' }}"
+
+      - name: Commit reports back to repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports
+          git diff --cached --quiet && echo "No report changes to commit" && exit 0
+          git commit -m "Semester report [skip ci]"
+          # The scraper pushes every few minutes, so a plain push loses the race
+          # often enough to matter. Rebase onto whatever it just landed.
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "push attempt ${attempt} lost a race with the scraper, retrying"
+            sleep 10
+          done
+          echo "could not push after 5 attempts" >&2
+          exit 1
