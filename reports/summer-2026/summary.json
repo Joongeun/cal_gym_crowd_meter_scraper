@@ -1,0 +1,94 @@
+{
+  "semester": "summer-2026",
+  "generated": "2026-08-25T16:24:11",
+  "window": [
+    "2026-05-21",
+    "2026-08-17"
+  ],
+  "load": {
+    "rows_read": 6886,
+    "rows_kept": 6884,
+    "rows_malformed": 2,
+    "rows_duplicate": 0,
+    "rows_out_of_range": 0
+  },
+  "facilities": [
+    {
+      "facility": "RSF",
+      "readings": 200,
+      "span": [
+        "2026-05-22",
+        "2026-08-17"
+      ],
+      "emptiest": {
+        "Monday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Tuesday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Wednesday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Thursday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Friday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Saturday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        },
+        "Sunday": {
+          "hour": 16,
+          "mean": 37.0,
+          "ci": [
+            33.0,
+            41.0
+          ],
+          "tied_hours": [],
+          "n": 5,
+          "confidence": "weak"
+        }
+      },
+      "phase_tests": [],
+      "phases": [],
+      "quiet_weeks": [],
+      "busy_weeks": []
+    },
+    {
+      "facility": "CMS",
+      "readings": 206
+    }
+  ]
+}
