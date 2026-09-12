@@ -1,0 +1,275 @@
+{
+  "semester": "spring-2026",
+  "generated": "2026-08-25T16:24:09",
+  "window": [
+    "2026-01-13",
+    "2026-05-20"
+  ],
+  "load": {
+    "rows_read": 6886,
+    "rows_kept": 6884,
+    "rows_malformed": 2,
+    "rows_duplicate": 0,
+    "rows_out_of_range": 0
+  },
+  "facilities": [
+    {
+      "facility": "RSF",
+      "readings": 1454,
+      "span": [
+        "2026-01-13",
+        "2026-05-20"
+      ],
+      "emptiest": {
+        "Monday": {
+          "hour": 22,
+          "mean": 62.3,
+          "ci": [
+            46.7,
+            77.3
+          ],
+          "tied_hours": [
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14
+          ],
+          "n": 9,
+          "confidence": "weak"
+        },
+        "Tuesday": {
+          "hour": 7,
+          "mean": 51.7,
+          "ci": [
+            32.7,
+            70.5
+          ],
+          "tied_hours": [
+            8,
+            9,
+            11,
+            12,
+            13,
+            22
+          ],
+          "n": 11,
+          "confidence": "weak"
+        },
+        "Wednesday": {
+          "hour": 13,
+          "mean": 57.8,
+          "ci": [
+            51.0,
+            64.6
+          ],
+          "tied_hours": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            22
+          ],
+          "n": 24,
+          "confidence": "weak"
+        },
+        "Thursday": {
+          "hour": 7,
+          "mean": 46.8,
+          "ci": [
+            32.5,
+            60.4
+          ],
+          "tied_hours": [
+            12,
+            13,
+            22
+          ],
+          "n": 11,
+          "confidence": "moderate"
+        },
+        "Friday": {
+          "hour": 22,
+          "mean": 39.2,
+          "ci": [
+            27.7,
+            48.9
+          ],
+          "tied_hours": [
+            7
+          ],
+          "n": 11,
+          "confidence": "moderate"
+        },
+        "Saturday": {
+          "hour": 13,
+          "mean": 50.4,
+          "ci": [
+            42.6,
+            56.2
+          ],
+          "tied_hours": [
+            12,
+            14
+          ],
+          "n": 5,
+          "confidence": "weak"
+        },
+        "Sunday": {
+          "hour": 11,
+          "mean": 50.3,
+          "ci": [
+            42.0,
+            62.7
+          ],
+          "tied_hours": [
+            12,
+            13,
+            14
+          ],
+          "n": 7,
+          "confidence": "weak"
+        }
+      },
+      "phase_tests": [
+        {
+          "weeks": [
+            0,
+            18
+          ],
+          "cut_week": 3,
+          "statistic": 0.1498,
+          "p_value": 0.9141,
+          "significant": false
+        }
+      ],
+      "phases": [],
+      "quiet_weeks": [
+        1
+      ],
+      "busy_weeks": []
+    },
+    {
+      "facility": "CMS",
+      "readings": 1459,
+      "span": [
+        "2026-01-13",
+        "2026-05-20"
+      ],
+      "emptiest": {
+        "Monday": {
+          "hour": 23,
+          "mean": 39.4,
+          "ci": [
+            33.9,
+            44.5
+          ],
+          "tied_hours": [
+            22
+          ],
+          "n": 13,
+          "confidence": "moderate"
+        },
+        "Tuesday": {
+          "hour": 9,
+          "mean": 13.7,
+          "ci": [
+            8.8,
+            19.0
+          ],
+          "tied_hours": [],
+          "n": 19,
+          "confidence": "strong"
+        },
+        "Wednesday": {
+          "hour": 21,
+          "mean": 23.2,
+          "ci": [
+            15.0,
+            30.2
+          ],
+          "tied_hours": [
+            20,
+            22,
+            23
+          ],
+          "n": 12,
+          "confidence": "moderate"
+        },
+        "Thursday": {
+          "hour": 9,
+          "mean": 16.7,
+          "ci": [
+            11.9,
+            21.2
+          ],
+          "tied_hours": [
+            0,
+            8,
+            20,
+            23
+          ],
+          "n": 15,
+          "confidence": "weak"
+        },
+        "Friday": {
+          "hour": 23,
+          "mean": 16.8,
+          "ci": [
+            13.5,
+            20.0
+          ],
+          "tied_hours": [
+            0,
+            20,
+            21,
+            22
+          ],
+          "n": 26,
+          "confidence": "weak"
+        },
+        "Saturday": {
+          "hour": 0,
+          "mean": 17.4,
+          "ci": [
+            14.0,
+            20.5
+          ],
+          "tied_hours": [],
+          "n": 24,
+          "confidence": "strong"
+        },
+        "Sunday": {
+          "hour": null,
+          "mean": null,
+          "ci": null,
+          "tied_hours": [],
+          "n": null,
+          "confidence": "none"
+        }
+      },
+      "phase_tests": [
+        {
+          "weeks": [
+            0,
+            17
+          ],
+          "cut_week": 3,
+          "statistic": 0.3946,
+          "p_value": 0.5594,
+          "significant": false
+        }
+      ],
+      "phases": [],
+      "quiet_weeks": [
+        1
+      ],
+      "busy_weeks": []
+    }
+  ]
+}
