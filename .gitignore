@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+# Scratch file the scraper writes on each run
+page.mhtml
